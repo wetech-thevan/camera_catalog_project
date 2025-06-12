@@ -1,0 +1,57 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+  So sánh sản phẩm - Camera Catalog
+{% endblock %}
+
+{% block content %}
+  <h1 class="mb-4">So sánh sản phẩm</h1>
+
+  {% if cameras %}
+    <div class="table-responsive">
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th style="width: 15%;">Thông số</th>
+            {% for camera in cameras %}
+              <th>
+                <img src="{{ camera.image.url }}" alt="{{ camera.name }}" class="img-fluid mb-2" style="max-height: 150px;">
+                <h6>{{ camera.name }}</h6>
+              </th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Giá</th>
+            {% for camera in cameras %}
+              <td class="fw-bold text-danger">{{ camera.price }}đ</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <th scope="row">Danh mục</th>
+            {% for camera in cameras %}
+              <td>{{ camera.category.name }}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <th scope="row">Độ phân giải</th>
+            {% for camera in cameras %}
+              <td>{{ camera.resolution }}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <th scope="row">Mô tả</th>
+            {% for camera in cameras %}
+              <td class="text-start">{{ camera.description|linebreaks }}</td>
+            {% endfor %}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="alert alert-warning" role="alert">
+      Bạn chưa chọn sản phẩm nào để so sánh. Vui lòng quay lại <a href="{% url 'product_list' %}" class="alert-link">trang sản phẩm</a> và chọn tối đa 3 sản phẩm.
+    </div>
+  {% endif %}
+{% endblock %}
