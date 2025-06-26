@@ -51,7 +51,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'products.context_processors.compare_context', # Thêm dòng này
+                'products.context_processors.compare_context',
             ],
         },
     },
@@ -81,11 +81,20 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
+
+# --- PHẦN CẤU HÌNH STATIC FILES ---
 STATIC_URL = '/static/'
+
+# Các thư mục chứa file static của riêng dự án (không nằm trong app)
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
+
+# === THIẾT LẬP MỚI ĐƯỢC THÊM VÀO ===
+# Thư mục sẽ chứa tất cả các file static sau khi chạy lệnh collectstatic
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+# === KẾT THÚC THIẾT LẬP MỚI ===
+
 
 # Media files (User uploaded files)
 MEDIA_URL = '/media/'

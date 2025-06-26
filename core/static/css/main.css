@@ -1,0 +1,374 @@
+/* core/static/css/main.css */
+
+body {
+    background-color: #f4f4f4;
+}
+
+.site-header {
+    background-color: #ff9900;
+    padding: 18px 0; /* Giữ nguyên padding bạn đã tinh chỉnh */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.site-logo {
+    height: 45px;
+    width: auto;
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+.header-contact .fa-phone {
+    font-size: 22px;
+    color: white;
+    margin-right: 10px;
+}
+
+.header-contact .phone-numbers {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.header-contact .phone-number {
+    display: block;
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.header-link-item {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+.header-link-item i {
+    font-size: 22px;
+    color: white;
+    margin-right: 10px;
+}
+
+.header-link-item .link-text a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+
+.main-container {
+    display: flex;
+    gap: 19px;
+    margin-top: 1.5rem;
+}
+
+.sidebar {
+    flex: 0 0 280px; /* Giữ nguyên chiều rộng bạn đã tinh chỉnh */
+    background-color: #fff;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    align-self: flex-start;
+    overflow: hidden;
+}
+
+.sidebar-title {
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #2f4858;
+    color: white;
+    padding: 12px 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-title i {
+    margin-right: 0.5rem;
+}
+
+.sidebar .nav {
+    padding: 1rem 1.5rem;
+}
+
+.sidebar .nav-link {
+    color: #333;
+    padding: 0.6rem 0.5rem;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.sidebar .nav-link .category-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+.site-header .form-control,
+.site-header .btn {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.85rem; 
+}
+
+.sub-banner-item {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.sub-banner-item img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sub-banner-item:hover img {
+    transform: scale(1.05);
+}
+
+.heading-bar {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff9900;
+}
+
+.heading-bar__title,
+.heading-bar__title a {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    color: #2f4858;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.category-showcase-item {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease-in-out;
+}
+.category-showcase-item:hover {
+    transform: translateY(-5px);
+    color: #ff9900;
+}
+
+.category-showcase-item .icon-wrapper {
+    width: 90px;
+    height: 90px;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to bottom, #ff9900, #ff5f6d);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+}
+
+.category-showcase-item .icon-wrapper img {
+    width: 50px;
+    height: 50px;
+}
+
+.category-showcase-item .category-name {
+    font-weight: 500;
+}
+
+.collection-item {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.collection-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.collection-item:hover img {
+    transform: scale(1.03);
+}
+
+.hot-sale-section {
+    background-color: #fff0f0;
+    border: 1px solid #f00000;
+}
+
+.heading-bar--hot-sale {
+    border-bottom-color: #f00000;
+}
+
+.heading-bar--hot-sale .heading-bar__title a {
+    color: #f00000;
+}
+
+/* === CSS CHO SLIDER === */
+.product-row-5 .col-lg-2-4 {
+    flex: 0 0 auto;
+    width: 20%; 
+}
+@media (max-width: 992px) { .product-row-5 .col-lg-2-4 { width: 33.333%; } }
+@media (max-width: 768px) { .product-row-5 .col-lg-2-4 { width: 50%; } }
+
+.slick-prev, .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 40px;
+    color: #ff9900;
+    opacity: 0.8;
+}
+.slick-prev { left: -50px; }
+.slick-next { right: -50px; }
+
+/* === CSS CHO THẺ SẢN PHẨM (PHIÊN BẢN CẬP NHẬT) === */
+
+.row-equal-height > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.product-thumbnail {
+    position: relative; /* Bật định vị cho thẻ cha của ảnh */
+}
+
+.product-card .card-img-top {
+    width: 100%;
+    height: 200px; 
+    object-fit: contain; 
+    padding: 0.5rem; /* Thêm chút đệm cho ảnh */
+}
+
+.product-card .card-body {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.product-card .product-name {
+    flex-grow: 1; 
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.product-card .mt-auto {
+    margin-top: auto; /* Đẩy toàn bộ khối (giá + nút) xuống đáy */
+}
+
+/* CSS giá sản phẩm */
+.price-box .new-price {
+    display: inline; /* Cho giá mới và giá cũ nằm trên cùng 1 hàng */
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f00000;
+    margin-right: 8px; /* Khoảng cách giữa giá mới và giá cũ */
+}
+.price-box .old-price {
+    display: inline; 
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Discount badge */
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f00000;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+/* === CSS CHO FOOTER === */
+.site-footer {
+    font-size: 0.9rem;
+}
+.top-footer {
+    background-color: #333333;
+    color: #fff;
+    padding: 1.5rem 0;
+}
+.subscribe-form .subscribe-text h6 {
+    font-weight: 600;
+    color: #fff;
+}
+.social-footer ul li span {
+    font-weight: 500;
+    color: #fff;
+}
+.mid-footer {
+    background-color: #fff;
+    padding: 3rem 0;
+    color: #6c757d;
+}
+.mid-footer .title-menu {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+.mid-footer .single-contact p,
+.mid-footer .single-contact span,
+.mid-footer .single-contact {
+    margin-bottom: 0.5rem;
+    color: #6c757d;
+}
+.mid-footer .single-contact a,
+.mid-footer .list-menu li a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.mid-footer .single-contact a:hover,
+.mid-footer .list-menu li a:hover {
+    color: #ff9900;
+}
+.mid-footer .list-menu li {
+    margin-bottom: 0.75rem;
+}
+.copyright-footer {
+    background-color: #2f4858;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+}

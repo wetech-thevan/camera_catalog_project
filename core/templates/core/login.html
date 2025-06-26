@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - Camera Catalog</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <header class="header">
+        <a href="{% url 'home' %}" class="logo">Camera Catalog</a>
+        <nav class="nav">
+            <a href="{% url 'home' %}">Trang chủ</a>
+            <a href="{% url 'product_list' %}">Sản phẩm</a>
+            <a href="{% url 'about' %}">Giới thiệu</a>
+            <a href="{% url 'contact' %}">Liên hệ</a>
+        </nav>
+    </header>
+
+    <div class="home">
+        <div class="content">
+            <h2>Chào mừng quay trở lại!</h2>
+            <p>Tìm kiếm giải pháp an ninh hoàn hảo cho không gian của bạn. <br> Đăng nhập để nhận được những ưu đãi tốt nhất.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="login">
+            <form action="">
+                <h2>Đăng Nhập</h2>
+                <div class="input-box">
+                    <input type="text" placeholder="Tên đăng nhập" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Mật khẩu" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Ghi nhớ đăng nhập</label>
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+
+                <button type="submit" class="btn">Đăng Nhập</button>
+
+                <div class="register-link">
+                    <p>Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

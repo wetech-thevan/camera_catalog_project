@@ -1,0 +1,107 @@
+{% load static %}
+
+<footer class="site-footer">
+    <div class="top-footer">
+        <div class="container-fluid px-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="subscribe-form d-flex align-items-center">
+                        <img src="{% static 'images/email-icon.svg' %}" alt="Email Icon" class="me-3">
+                        <div class="subscribe-text">
+                            <h6 class="m-0">Bạn muốn nhận khuyến mãi đặc biệt? Đăng ký ngay.</h6>
+                        </div>
+                        <div class="form_register flex-grow-1 ms-4">
+                            <form id="mc-form" class="newsletter-form input-group">
+                                <input class="form-control" type="email" placeholder="Nhập email của bạn..." name="EMAIL" required="">
+                                <button class="btn btn-dark" type="submit">Đăng ký</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="social-footer">
+                        <ul class="follow_option list-unstyled d-flex justify-content-lg-end align-items-center m-0">
+                            <li class="me-3"><span>Kết nối với chúng tôi:</span></li>
+                            <li class="me-2">
+                                <a href="#" target="_blank" title="Facebook">
+                                    <img src="{% static 'images/facebook.svg' %}" width="32" height="32" alt="facebook">	
+                                </a>
+                            </li>
+                            <li class="me-2">
+                                <a href="#" target="_blank" title="Zalo">
+                                    <img src="{% static 'images/zalo.svg' %}" width="32" height="32" alt="zalo">	
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="Instagram">
+                                    <img src="{% static 'images/instagram.svg' %}" width="32" height="32" alt="instagram">	
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mid-footer">
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <a href="/" class="logo-wrapper mb-3 d-block">	
+						<img src="{% static 'images/logo-footer.webp' %}" alt="logo footer" style="height: 35px; width: auto;">
+					</a>
+                    <div class="single-contact">
+						<p>Công ty TNHH WETech Online Việt Nam</p>
+						<div class="content">
+							<p><i class="fa fa-map-marker-alt me-2"></i><b>Văn phòng CN1:</b> 6/10 Đ.Lê Lai, Q.Ninh Kiều, Tp. Cần Thơ</p>
+							<p><i class="fa fa-map-marker-alt me-2"></i><b>Văn phòng CN2:</b> 2/32 Đ.3/2, Q.Ninh Kiều, TP. Cần Thơ</p>
+						</div>
+					</div>
+					<div class="single-contact">
+						<i class="fa fa-mobile-alt me-2"></i>
+						<span><strong>Điện thoại: </strong><a href="tel:0979999999">0979.999.999</a></span>
+					</div>
+					<div class="single-contact">
+						<i class="fa fa-envelope me-2"></i>
+						<span><strong>Email: </strong><a href="mailto:info@cameracatalog.com">info@cameracatalog.com</a></span>
+					</div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h4 class="title-menu">Hỗ trợ khách hàng</h4>
+                    <ul class="list-menu list-unstyled">
+						<li><a href="#">Hướng dẫn mua hàng</a></li>
+						<li><a href="#">Hướng dẫn giao nhận</a></li>
+						<li><a href="#">Điều khoản dịch vụ</a></li>
+						<li><a href="#">Hướng dẫn thanh toán</a></li>
+					</ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h4 class="title-menu">Chính sách</h4>
+                    <ul class="list-menu list-unstyled">
+						<li><a href="#">Chính sách bảo mật</a></li>
+						<li><a href="#">Chính sách vận chuyển</a></li>
+						<li><a href="#">Chính sách bảo hành</a></li>
+						<li><a href="#">Chính sách đổi trả</a></li>
+					</ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h4 class="title-menu">Tổng đài hỗ trợ</h4>
+                    <p>Hotline 1: <a class="fw-bold" href="tel:0979999999">0979.999.999</a> (8h-20h)</p>
+                    <p>Hotline 2: <a class="fw-bold" href="tel:0979999999">0979.999.999</a> (8h-20h)</p>
+                    <p>Hỗ trợ kỹ thuật: <a class="fw-bold" href="tel:19002625">1900.9999</a> (8h-17h30)</p>
+                    <a href="#" target="_blank">
+						<img src="{% static 'images/logo_bct.webp' %}" style="max-width: 150px;" alt="Bộ Công Thương">
+					</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright-footer">
+        <div class="container-fluid px-5">
+            <span>© Bản quyền được cung cấp bởi Thiên ©</span>
+        </div>
+    </div>
+</footer>

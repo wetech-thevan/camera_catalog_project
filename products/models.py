@@ -4,6 +4,14 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=255, verbose_name="Tên danh mục")
     slug = models.SlugField(max_length=255, unique=True, help_text="Phần thân thiện với URL, tự động tạo từ tên nếu để trống.")
+    
+    # === TRƯỜNG MỚI ĐƯỢC THÊM VÀO ===
+    icon = models.ImageField(
+        upload_to='category_icons/', 
+        blank=True, 
+        null=True, 
+        verbose_name="Icon danh mục"
+    )
 
     class Meta:
         verbose_name = "Danh mục"
@@ -18,13 +26,11 @@ class Camera(models.Model):
     description = models.TextField(verbose_name="Mô tả sản phẩm")
 
     price = models.DecimalField(max_digits=10, decimal_places=0, verbose_name="Giá bán")
-    # --- CÁC TRƯỜNG MỚI ---
     original_price = models.DecimalField(max_digits=10, decimal_places=0, blank=True, null=True, verbose_name="Giá gốc (nếu có)")
 
     spec_line_1 = models.CharField(max_length=255, blank=True, verbose_name="Dòng thông số 1")
     spec_line_2 = models.CharField(max_length=255, blank=True, verbose_name="Dòng thông số 2")
     spec_line_3 = models.CharField(max_length=255, blank=True, verbose_name="Dòng thông số 3")
-    # --- KẾT THÚC CÁC TRƯỜNG MỚI ---
 
     image = models.ImageField(upload_to='cameras/', verbose_name="Hình ảnh sản phẩm")
     resolution = models.CharField(max_length=100, blank=True, verbose_name="Độ phân giải")
@@ -41,7 +47,6 @@ class Camera(models.Model):
     def __str__(self):
         return self.name
 
-    # --- THUỘC TÍNH MỚI ĐỂ TÍNH GIẢM GIÁ ---
     @property
     def discount_percent(self):
         if self.original_price and self.original_price > self.price:

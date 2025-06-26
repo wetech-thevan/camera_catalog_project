@@ -4,7 +4,8 @@ from .models import Category, Camera
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'slug')
+    # Thêm 'icon' vào danh sách hiển thị
+    list_display = ('name', 'slug', 'icon') 
     prepopulated_fields = {'slug': ('name',)}
 
 @admin.register(Camera)
@@ -13,7 +14,6 @@ class CameraAdmin(admin.ModelAdmin):
     list_filter = ('category', 'is_bestseller')
     search_fields = ('name', 'description')
 
-    # Sắp xếp lại các trường trong form edit cho gọn gàng
     fieldsets = (
         ('Thông tin chung', {
             'fields': ('category', 'name', 'image', 'description')

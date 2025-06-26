@@ -1,0 +1,19 @@
+{% load static %}
+
+<div class="product-section bg-white p-4 rounded shadow-sm mb-4">
+    <div class="heading-bar">
+      <h2 class="heading-bar__title">
+          <a href="{{ section_url | default:'#' }}">{{ section_title }}</a>
+      </h2>
+    </div>
+
+    <div class="row g-3 mt-2 product-row-5 row-equal-height">
+      {% for camera in product_list %}
+        <div class="col-lg-2-4">
+          {% include 'products/includes/product_card.html' with camera=camera %}
+        </div>
+      {% empty %}
+        <p class="text-muted">Chưa có sản phẩm nào trong mục này.</p>
+      {% endfor %}
+    </div>
+</div>
